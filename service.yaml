@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: train-scheduler-service
+
+spec:
+  type: LoadBalancer
+
+  selector:
+    app: train-scheduler
+
+  ports:
+    - port: 80
+      targetPort: 8080
